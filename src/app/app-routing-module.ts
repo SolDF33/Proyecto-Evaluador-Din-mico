@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// Importamos los componentes que creaste
-import { HomeComponent } from './components/home/home.component';
-import { EvaluadorComponent } from './components/evaluador/evaluador.component';
-import { ResultadosComponent } from './components/resultados/resultados.component';
+// Importamos tus componentes reales con sus nombres de archivo y clases correctas
+import { Home } from './components/home/home';
+import { Evaluador } from './components/evaluador/evaluador';
+import { Resultados } from './components/resultados/resultados';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Ruta por defecto
-  { path: 'home', component: HomeComponent },
-  { path: 'evaluador', component: EvaluadorComponent },
-  { path: 'resultados', component: ResultadosComponent }
+  { path: 'home', component: Home },
+  { path: 'evaluador', component: Evaluador },
+  { path: 'resultados', component: Resultados },
+  { path: '**', redirectTo: '/home' } // Comodín por seguridad si escriben una ruta inexistente
 ];
 
 @NgModule({

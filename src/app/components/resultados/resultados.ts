@@ -7,3 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './resultados.css',
 })
 export class Resultados {}
+
