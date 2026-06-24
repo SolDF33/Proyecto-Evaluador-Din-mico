@@ -1,1 +1,56 @@
-<p>resultados works!</p>
+<section class="resultados-page">
+  <div class="resultados-card">
+    <p class="eyebrow">Integrante 4 · Resultados y estadisticas</p>
+    <h1>Panel de rendimiento</h1>
+    <p class="intro">
+      Esta pantalla resume el resultado final de la evaluacion y muestra una
+      lectura rapida del desempeno del usuario.
+    </p>
+
+    <div class="estado-badge" [class.aprobado]="aprobo" [class.desaprobado]="nota !== null && !aprobo">
+      {{ estado }}
+    </div>
+
+    <div class="nota-principal" *ngIf="nota !== null; else sinResultados">
+      <div class="nota-valor">{{ nota }}/{{ notaMaxima }}</div>
+      <p>{{ mensaje }}</p>
+    </div>
+
+    <ng-template #sinResultados>
+      <div class="nota-principal sin-datos">
+        <div class="nota-valor">--</div>
+        <p>{{ mensaje }}</p>
+      </div>
+    </ng-template>
+
+    <div class="progreso-wrapper">
+      <div class="progreso-label">
+        <span>Porcentaje alcanzado</span>
+        <strong>{{ porcentaje }}%</strong>
+      </div>
+      <div class="progreso-track">
+        <div class="progreso-fill" [class]="barraClase" [style.width.%]="porcentaje"></div>
+      </div>
+    </div>
+
+    <div class="metricas">
+      <article class="metrica">
+        <span>Total preguntas</span>
+        <strong>{{ totalPreguntas }}</strong>
+      </article>
+      <article class="metrica">
+        <span>Aciertos</span>
+        <strong>{{ aciertos }}</strong>
+      </article>
+      <article class="metrica">
+        <span>Errores</span>
+        <strong>{{ errores }}</strong>
+      </article>
+    </div>
+
+    <div class="acciones">
+      <a routerLink="/evaluador" class="btn btn-primary">Intentar nuevamente</a>
+      <a routerLink="/home" class="btn btn-secondary">Volver al inicio</a>
+    </div>
+  </div>
+</section>
