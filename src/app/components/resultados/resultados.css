@@ -1,0 +1,18 @@
+.contenedor {
+  text-align: center;
+  padding: 40px;
+}
+
+.resultado {
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.nota {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 20px;
+}

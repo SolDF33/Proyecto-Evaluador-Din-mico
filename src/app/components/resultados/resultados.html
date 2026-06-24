@@ -1,1 +1,27 @@
-<p>resultados works!</p>
+<div class="contenedor">
+
+  <h1>Resultado Final</h1>
+
+  <h2>Nota: {{ nota }}/10</h2>
+
+  <div *ngIf="errores.length > 0">
+
+    <h3>Temas a reforzar</h3>
+
+    <ul>
+      <li *ngFor="let tema of errores">
+        {{ tema }}
+      </li>
+    </ul>
+
+  </div>
+
+  <div *ngIf="errores.length === 0">
+    <h3>¡Excelente! No tienes temas pendientes.</h3>
+  </div>
+
+  <button routerLink="/evaluador">
+    Realizar otra evaluación
+  </button>
+
+</div>

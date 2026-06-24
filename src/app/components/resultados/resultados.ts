@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   templateUrl: './resultados.html',
   styleUrl: './resultados.css',
 })
-export class Resultados {}
+export class Resultados {
 
+  nota = localStorage.getItem('notaFinal');
+
+  errores: string[] = [];
+
+  constructor() {
+
+    const datos =
+      localStorage.getItem('errores');
+
+    if (datos) {
+      this.errores = JSON.parse(datos);
+    }
+
+  }
+}
