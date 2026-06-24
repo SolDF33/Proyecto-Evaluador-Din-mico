@@ -1,63 +1,69 @@
-.home-container {
-  max-width: 900px;
-  margin: 90px auto 40px auto; /* El margen superior evita que la navbar fija tape el contenido */
-  padding: 0 20px;
+/* Estilos para el contenedor principal de la página de inicio */
+.pagina-de-inicio {
+  margin: 110px 20px 20px 20px; /* Espacio arriba para que no tape la barra de navegación */
 }
 
-.hero-card {
-  background: var(--white);
-  padding: 50px 30px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  margin-bottom: 30px;
+/* Estilos para el bloque de bienvenida principal */
+.bloque-de-bienvenida {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+  padding: 20px; /* Espacio dentro del bloque */
+  text-align: center; /* Todo el texto centrado */
+  border: 2px solid #000000; /* Borde negro alrededor */
+  margin-bottom: 20px; /* Espacio entre este bloque y el siguiente */
 }
 
-.hero-card h1 {
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-top: 0;
+/* Estilo para el título grande del bloque de bienvenida */
+.bloque-de-bienvenida h1 {
+  color: #26a3f1; /* Color azul para el título */
+  margin: 0; /* Quita el margen por defecto */
 }
 
-.section-card {
-  background: var(--white);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  margin-bottom: 30px;
+/* Estilos para los bloques de texto generales */
+.bloque-de-texto {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 20px; /* Espacio dentro del bloque */
+  border: 2px solid #000000; /* Borde negro alrededor */
+  margin-bottom: 20px; /* Espacio entre bloques */
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-bottom: 30px;
+/* Estilos para los títulos de los bloques de texto */
+.bloque-de-texto h2, .bloque-de-texto h3 {
+  color: #26a3f1; /* Color azul para los títulos */
+  margin-top: 0; /* Quita el margen superior */
 }
 
-.feature-item {
-  background: var(--white);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  border-top: 4px solid var(--secondary);
+/* Estilos para la sección de características */
+.seccion-de-caracteristicas {
+  display: grid; /* Hace que las características queden en cuadrículas */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta automáticamente el número de columnas */
+  gap: 20px; /* Espacio entre cada característica */
+  margin-bottom: 20px; /* Espacio entre esta sección y la siguiente */
 }
 
-/* Formulario de contacto */
-.basic-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+/* Estilos para cada característica individual */
+.caracteristica {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 20px; /* Espacio dentro de la característica */
+  border: 2px solid #000000; /* Borde negro alrededor */
 }
 
-.basic-form input, .basic-form textarea {
-  padding: 10px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 1rem;
+/* Estilos para los títulos de las características */
+.caracteristica h3 {
+  color: #26a3f1; /* Color azul para los títulos */
+  margin-top: 0; /* Quita el margen superior */
 }
 
-.basic-form input:focus, .basic-form textarea:focus {
-  outline: 2px solid var(--secondary);
+/* Estilos para el formulario de contacto */
+.formulario-de-contacto {
+  margin-top: 20px; /* Espacio entre el texto y el formulario */
+}
+
+/* Estilos para los campos de texto del formulario */
+.formulario-de-contacto input, .formulario-de-contacto textarea {
+  display: block; /* Hace que cada campo quede debajo del anterior */
+  width: 90%; /* Ocupan casi todo el ancho disponible */
+  margin-bottom: 10px; /* Espacio entre cada campo */
+  padding: 8px; /* Espacio dentro del campo */
+  border: 1px solid #000000; /* Borde negro fino */
 }

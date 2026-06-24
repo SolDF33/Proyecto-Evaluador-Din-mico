@@ -1,48 +1,27 @@
-/* Paleta de colores institucional y limpia */
-:root {
-  --primary: #1e3a8a;       /* Azul académico */
-  --primary-hover: #172554;
-  --secondary: #3b82f6;     /* Azul brillante */
-  --secondary-hover: #2563eb;
-  --bg-site: #f1f5f9;       /* Fondo gris claro moderno */
-  --text-main: #0f172a;     /* Texto legible */
-  --text-muted: #475569;
-  --white: #ffffff;
-  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-}
-
+/* Estilos para todo el cuerpo de la página */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background-color: var(--bg-site);
-  color: var(--text-main);
-  line-height: 1.6;
+  background-color: #8cc9f1; /* Color celeste de fondo */
+  font-family: Arial, sans-serif; /* Tipografía simple y fácil de leer */
+  margin: 0; /* Quita el margen por defecto */
+  padding: 0; /* Quita el espacio interno por defecto */
 }
 
-/* Botones estándar reutilizables para el equipo */
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+/* Estilos generales para todos los botones */
+.boton {
+  display: inline-block; /* Hace que el botón se comporte como un texto pero con tamaño */
+  padding: 10px; /* Espacio dentro del botón */
+  background-color: #26a3f1; /* Color de fondo azul */
+  color: #ffffff; /* Letras blancas */
+  text-decoration: none; /* Quita el subrayado si es un link */
+  border: 2px solid #000000; /* Borde negro alrededor */
 }
 
-.btn-primary {
-  background-color: var(--secondary);
-  color: var(--white);
-}
-.btn-primary:hover {
-  background-color: var(--secondary-hover);
+/* Estilo especial para botones azules */
+.boton-azul {
+  background-color: #26a3f1;
 }
 
-.btn-secondary {
-  background-color: var(--primary);
-  color: var(--white);
-}
-.btn-secondary:hover {
-  background-color: var(--primary-hover);
+/* Estilo especial para botones negros */
+.boton-negro {
+  background-color: #000000;
 }
