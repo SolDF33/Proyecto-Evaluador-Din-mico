@@ -1,0 +1,48 @@
+/* Paleta de colores institucional y limpia */
+:root {
+  --primary: #1e3a8a;       /* Azul académico */
+  --primary-hover: #172554;
+  --secondary: #3b82f6;     /* Azul brillante */
+  --secondary-hover: #2563eb;
+  --bg-site: #f1f5f9;       /* Fondo gris claro moderno */
+  --text-main: #0f172a;     /* Texto legible */
+  --text-muted: #475569;
+  --white: #ffffff;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-site);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Botones estándar reutilizables para el equipo */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background-color: var(--secondary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.btn-secondary:hover {
+  background-color: var(--primary-hover);
+}
