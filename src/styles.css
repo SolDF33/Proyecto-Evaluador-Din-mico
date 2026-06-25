@@ -19,9 +19,11 @@ body {
 /* Estilo especial para botones azules */
 .boton-azul {
   background-color: #26a3f1;
+  border-radius: 12px;
 }
 
 /* Estilo especial para botones negros */
 .boton-negro {
   background-color: #000000;
+  border-radius: 12px;
 }

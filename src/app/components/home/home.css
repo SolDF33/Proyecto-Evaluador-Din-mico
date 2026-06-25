@@ -11,6 +11,7 @@
   text-align: center; /* Todo el texto centrado */
   border: 2px solid #000000; /* Borde negro alrededor */
   margin-bottom: 20px; /* Espacio entre este bloque y el siguiente */
+  border-radius: 20px;
 }
 
 /* Estilo para el título grande del bloque de bienvenida */
@@ -23,8 +24,9 @@
 .bloque-de-texto {
   background-color: #ffffff; /* Fondo blanco */
   padding: 20px; /* Espacio dentro del bloque */
-  border: 2px solid #000000; /* Borde negro alrededor */
+  border: 2px solid #ffffff; /* Borde negro alrededor */
   margin-bottom: 20px; /* Espacio entre bloques */
+  border-radius: 20px;
 }
 
 /* Estilos para los títulos de los bloques de texto */
@@ -46,6 +48,7 @@
   background-color: #ffffff; /* Fondo blanco */
   padding: 20px; /* Espacio dentro de la característica */
   border: 2px solid #000000; /* Borde negro alrededor */
+  border-radius: 20px;
 }
 
 /* Estilos para los títulos de las características */
@@ -61,7 +64,6 @@
 
 /* Estilos para los campos de texto del formulario */
 .formulario-de-contacto input, .formulario-de-contacto textarea {
-  display: block; /* Hace que cada campo quede debajo del anterior */
   width: 90%; /* Ocupan casi todo el ancho disponible */
   margin-bottom: 10px; /* Espacio entre cada campo */
   padding: 8px; /* Espacio dentro del campo */

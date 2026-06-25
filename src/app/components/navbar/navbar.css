@@ -21,7 +21,7 @@
   list-style-type: none; /* Quita los puntitos de la lista */
   margin: 0; /* Quita el margen por defecto */
   padding: 10px; /* Espacio alrededor de los links */
-  background-color: #dae3fa; /* Color gris-azul claro de fondo */
+  background-color: #ffffff; /* Color gris-azul claro de fondo */
 }
 
 /* Cada elemento de la lista de links */
@@ -39,5 +39,6 @@
 
 /* Estilo para el link de la página en la que estamos actualmente */
 .links-de-navegacion li a.link-activo {
-  color: #ff0000; /* Se pone rojo cuando es la página activa */
+  color: #26a3f1; /* Se pone rojo cuando es la página activa */
+  font-weight: 1000;
 }
