@@ -1,9 +1,6 @@
 <section class="resultados-page">
   <div class="resultados-card">
     <h1>Resultado de evaluacion</h1>
-    <p class="intro">
-      el componente de resultados, que toma la nota final, calcula porcentaje, aciertos y errores, y lo muestra 
-    </p>
 
     <div class="estado-badge" [class.aprobado]="aprobo" [class.desaprobado]="nota !== null && !aprobo">
       {{ estado }}
@@ -20,16 +17,6 @@
         <p>{{ mensaje }}</p>
       </div>
     </ng-template>
-
-    <div class="progreso-wrapper">
-      <div class="progreso-label">
-        <span>Porcentaje alcanzado</span>
-        <strong>{{ porcentaje }}%</strong>
-      </div>
-      <div class="progreso-track">
-        <div class="progreso-fill" [class]="barraClase" [style.width.%]="porcentaje"></div>
-      </div>
-    </div>
 
     <div class="metricas">
       <article class="metrica">
