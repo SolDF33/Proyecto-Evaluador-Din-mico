@@ -1,65 +1,52 @@
-import { Component } from '@angular/core';
+import { Component, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-resultados',
   standalone: false,
   templateUrl: './resultados.html',
-  styleUrl: './resultados.css',
+  styleUrls: ['./resultados.css'],
 })
 export class Resultados {
-  readonly notaMaxima = 10;
-  readonly puntosPorPregunta = 2;
-  readonly totalPreguntas = this.notaMaxima / this.puntosPorPregunta;
-
+  // 1. DEFINIMOS LAS VARIABLES QUE EL HTML ESTÁ RECLAMANDO
+  totalPreguntas = 10;
+  notaMaxima = 10;
   nota: number | null = null;
   porcentaje = 0;
   aciertos = 0;
-  errores = this.totalPreguntas;
-  mensaje = 'Todavia no hay una evaluacion finalizada.';
+  errores = 0;
+  mensaje = 'Todavía no hay una evaluación finalizada.';
 
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     this.cargarResultados();
   }
 
+  // 2. MÉTODOS QUE EL HTML NECESITA
   get aprobo(): boolean {
     return this.nota !== null && this.nota >= 6;
   }
 
   get estado(): string {
-    if (this.nota === null) {
-      return 'Sin datos';
-    }
-
-    return this.aprobo ? 'Aprobado' : 'Desaprobado';
+    return this.nota === null ? 'Sin datos' : (this.aprobo ? 'Aprobado' : 'Desaprobado');
   }
 
   get barraClase(): string {
-    if (this.nota === null) {
-      return 'sin-datos';
-    }
-
-    return this.aprobo ? 'aprobado' : 'desaprobado';
+    return this.nota === null ? 'sin-datos' : (this.aprobo ? 'aprobado' : 'desaprobado');
   }
 
   private cargarResultados(): void {
-    const notaGuardada = localStorage.getItem('notaFinal');
+    if (isPlatformBrowser(this.platformId)) {
+      const notaGuardada = localStorage.getItem('notaFinal');
+      if (notaGuardada === null) return;
 
-    if (notaGuardada === null) {
-      return;
+      this.nota = Number(notaGuardada);
+      this.porcentaje = Math.round((this.nota / this.notaMaxima) * 100);
+      this.aciertos = this.nota;
+      this.errores = this.totalPreguntas - this.aciertos;
+      
+      this.mensaje = this.aprobo
+        ? 'Buen trabajo. La evaluación indica un rendimiento satisfactorio.'
+        : 'Todavía hay temas para reforzar. Podes volver a intentarlo.';
     }
-
-    const notaParseada = Number(notaGuardada);
-
-    if (Number.isNaN(notaParseada)) {
-      return;
-    }
-
-    this.nota = notaParseada;
-    this.porcentaje = Math.round((this.nota / this.notaMaxima) * 100);
-    this.aciertos = Math.round(this.nota / this.puntosPorPregunta);
-    this.errores = this.totalPreguntas - this.aciertos;
-    this.mensaje = this.aprobo
-      ? 'Buen trabajo. La evaluacion indica un rendimiento satisfactorio.'
-      : 'Todavia hay temas para reforzar. Podes volver a intentarlo.';
   }
 }

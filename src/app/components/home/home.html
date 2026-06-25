@@ -35,11 +35,12 @@
     <h2>Contacto & Soporte</h2>
     <p>¿Tenés dudas o sugerencias sobre la plataforma? Dejanos tu mensaje.</p>
     <form class="formulario-de-contacto">
-      <input type="text" placeholder="Tu Nombre" required />
-      <input type="email" placeholder="Tu Correo Electrónico" required />
-      <textarea placeholder="Tu Mensaje o Consulta" rows="4" required></textarea>
-      <button type="submit" class="boton boton-negro">Enviar Mensaje</button>
-    </form>
-  </div>
-
-</div>
+  <input type="text" placeholder="Tu Nombre" required />
+  <input type="email" placeholder="Tu Correo Electrónico" required />
+  <textarea placeholder="Tu Mensaje o Consulta" rows="4" required></textarea>
+  
+  <button type="button" class="boton boton-negro" (click)="enviarMensaje(); $event.preventDefault()">
+    Enviar Mensaje
+  </button>
+</form>
+  </div>  
