@@ -1,0 +1,39 @@
+/* Esto hace que ambas tarjetas tengan siempre la misma altura */
+.galeria-grid {
+  display: flex; /* Cambiamos a flex para controlar mejor la altura */
+  align-items: stretch; /* Esto estira ambos bloques al largo del más alto */
+  gap: 20px;
+}
+
+.card-foto, .card-recursos {
+  flex: 1; /* Ambas ocupan el 50% exacto */
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Logos más grandes */
+.logo-grande {
+  width: 60px; /* Logo más grande */
+  height: 60px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.recurso-item {
+  display: flex;
+  align-items: flex-start; /* Alinea logo con el inicio del texto */
+  margin-bottom: 25px;
+}
+
+.texto-recurso a {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.texto-recurso p {
+  font-size: 0.9em;
+  color: #555;
+  margin: 5px 0 0 0;
+}

@@ -1,0 +1,41 @@
+/* src/app/components/nosotros/nosotros.css */
+.nosotros-container {
+  /* Cambiamos el ancho para que sea más flexible */
+  width: 90%; 
+  margin: 40px auto; /* Esto lo centra y le da distancia del navbar */
+  padding: 40px;
+  background-color: #ffffff;
+  border: 2px solid #b3d7ff;
+  border-radius: 12px;
+}
+h1 {
+  color: #007bff; /* El azul que te gustaba */
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.descripcion-general {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+}
+
+.equipo-grid {
+  display: grid;
+  /* Cambiamos a 1fr 1fr para que las dos columnas ocupen el 50% cada una del contenedor */
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+}
+
+.miembro {
+  background-color: #f8fbff;
+  border: 1px solid #d1e7ff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+.miembro h3 {
+  color: #0056b3;
+  margin-top: 0;
+}

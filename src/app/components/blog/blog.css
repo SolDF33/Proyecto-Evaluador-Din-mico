@@ -1,0 +1,27 @@
+/* src/app/components/blog/blog.css */
+.blog-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border: 2px solid #b3d7ff;
+  border-radius: 12px;
+}
+
+.post {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.meta {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+h1 {
+  color: #007bff;
+  text-align: center;
+}

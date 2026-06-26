@@ -1,19 +1,23 @@
+/* --- ESTILOS ORIGINALES QUE TE GUSTAN --- */
+
 /* Estilos para todo el cuerpo de la página */
 body {
-  background-color: #8cc9f1; /* Color celeste de fondo */
-  font-family: Arial, sans-serif; /* Tipografía simple y fácil de leer */
-  margin: 0; /* Quita el margen por defecto */
-  padding: 0; /* Quita el espacio interno por defecto */
+  background-color: #8cc9f1; /* Tu color celeste original */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* CORRECCIÓN PARA EL NAVBAR: */
+  padding-top: 70px; 
 }
 
 /* Estilos generales para todos los botones */
 .boton {
-  display: inline-block; /* Hace que el botón se comporte como un texto pero con tamaño */
-  padding: 10px; /* Espacio dentro del botón */
-  background-color: #26a3f1; /* Color de fondo azul */
-  color: #ffffff; /* Letras blancas */
-  text-decoration: none; /* Quita el subrayado si es un link */
-  border: 2px solid #000000; /* Borde negro alrededor */
+  display: inline-block;
+  padding: 10px;
+  background-color: #26a3f1;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #000000;
 }
 
 /* Estilo especial para botones azules */
